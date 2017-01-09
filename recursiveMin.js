@@ -1,13 +1,15 @@
+// Returns the minimum number from the array but it modifies the array
 function recursiveMin(numbers) {
 	if (numbers.length == 0) {
 		return undefined;
-	}if (numbers.length == 1) {
+	} else if (numbers.length == 1) {
 		return numbers[0];
 	} else {
 		return Math.min(numbers[0], recursiveMin(numbers.splice(1, numbers.length - 1)));
 	}
 }
 
+// Returns the minimum number from the array but it does no modify the array
 function recursiveMinNoRemove(start, numbers) {
 	if (numbers.length == 0) {
 		return undefined;
