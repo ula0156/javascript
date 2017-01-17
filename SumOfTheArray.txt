@@ -1,0 +1,10 @@
+function sumNum(arr, ind) {
+  if (ind == arr.length) {
+    return 0;
+}
+  else {
+    return arr[ind] + sumNum(arr, ind + 1);
+  }
+
+}  
+sumNum([1,2,4,7,9] , 0);
