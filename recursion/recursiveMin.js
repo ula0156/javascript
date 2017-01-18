@@ -20,7 +20,13 @@ function recursiveMinNoRemove(start, numbers) {
 	}
 }
 
-console.log(recursiveMin([]));
-var values = [12, 9, 3, 4, 5];
-console.log(recursiveMin(values));
-console.log(recursiveMinNoRemove(0, [12, 9, 3, 4, 5]));
+function test() {
+	console.log(recursiveMin([]));
+	var values = [12, 9, 3, 4, 5];
+	console.log(recursiveMin(values));
+	console.log(recursiveMinNoRemove(0, [12, 9, 3, 4, 5]));
+}
+
+module.exports = {
+    run: test
+}

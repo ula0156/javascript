@@ -7,3 +7,14 @@ function fib(n) {
 	
 	return sum;
 }
+
+function test() {
+	var index = 4;
+	var result = fib(index);
+
+	console.log("Fibonacci number " + index + " is: " + result);
+}
+
+module.exports = {
+    run: test
+}
