@@ -33,6 +33,7 @@
     <Compile Include=".\*\*.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Compile Include="test.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="arrays\" />
