@@ -40,7 +40,12 @@ function quickSort(array, startIndex, endIndex) {
     quickSort(array, startIndex, pivotIndex - 1);
 
     // Sort the elements on the right side of the pivot.
-    quickSort(array, pivotIndex + 1, endIndex); }
+    quickSort(array, pivotIndex + 1, endIndex); 
+}
+
+function sort(array) {
+    quickSort(array, 0, array.length - 1);
+}
 
 function test() {
     var array = [4, 7, 1, 3, 8, 0, 6, 0];
