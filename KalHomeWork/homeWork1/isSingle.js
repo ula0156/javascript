@@ -1,3 +1,6 @@
+'use strict';
+const assert = require('assert');
+
 function getSingle(array, startIndex, endIndex) {
     if (startIndex == endIndex) {
         return array[startIndex];
@@ -32,7 +35,14 @@ function getSingle(array, startIndex, endIndex) {
 function test() {
     // index       0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
     var numbers = [1, 2, 2, 3, 3, 4, 4, 6, 6, 7, 7];
-    console.log(getSingle(numbers, 0, numbers.length - 1));
+    assert(getSingle(numbers, 0, numbers.length - 1) == 1);
+    numbers = [2, 2, 3, 3, 4, 6, 6, 7, 7];
+    assert(getSingle(numbers, 0, numbers.length - 1) == 4);
+    numbers = [2, 2, 3, 3, 4, 4, 6, 6, 7, 7, 8];
+    assert(getSingle(numbers, 0, numbers.length - 1) == 8);
+    numbers = [7];
+    assert(getSingle(numbers, 0, numbers.length - 1) == 7);
+
 }
 
 module.exports = {
