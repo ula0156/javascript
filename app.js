@@ -6,6 +6,7 @@ var test = require("./test.js")
 var nonRecursiveFibonacci = require("./recursion/nonRecursiveFibonacci.js");
 var recursiveFibonacci = require("./recursion/recursiveFibonacci.js");
 var recursiveMin = require("./recursion/recursiveMin.js");
+var singleNumber = require("./recursion/singleNumber.js");
 
 // Arrays
 var binarySearch = require("./arrays/binarySearch.js");
@@ -28,6 +29,6 @@ var wordContext = require("./other/wordContext.js");
 
 // To run a different module just change this line and make sure
 // the module exports the "run" function.
-var moduleToRun = digits;
+var moduleToRun = singleNumber;
 
 moduleToRun.run();
