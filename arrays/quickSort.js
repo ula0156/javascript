@@ -1,21 +1,22 @@
-// Move the numbers  which are less than pivot on the left side of the pivot, bigger than pivot to the right of it
+// Move the numbers  which are less than pivot on the left side of the pivot, bigger than pivot to the right of it 
 function pivotSort(array, startIndex, endIndex) {
       var pivotIndex = startIndex;
-      for (var i = startIndex + 1; i <= endIndex; i++) {
-        if (array[pivotIndex] > array[i]) {
+      var currentIndex = startIndex + 1;
+      for (; currentIndex <= endIndex; currentIndex++) {
+        if (array[pivotIndex] > array[currentIndex]) {
 
-            // Swap when smaller number is positioned stright after the pivot
-            if (i == pivotIndex + 1) {
+            // Swap when smaller number is positioned straight after the pivot
+            if (currentIndex == pivotIndex + 1) {
                 var tmp = array[pivotIndex];
-                array[pivotIndex] = array[i];
-                array[i] = tmp;
+                array[pivotIndex] = array[currentIndex];
+                array[currentIndex] = tmp;
             } 
             
-            // Swap when smaller number isn't positioned after the pivot
+            // Swap when smaller number isn't positioned next to the pivot
             else {
                 var tmp = array[pivotIndex];
-                array[pivotIndex] = array[i];
-                array[i] = array[pivotIndex + 1];
+                array[pivotIndex] = array[currentIndex];
+                array[currentIndex] = array[pivotIndex + 1];
                 array[pivotIndex + 1] = tmp;
             }
 
@@ -39,7 +40,11 @@ function quickSort(array, startIndex, endIndex) {
     quickSort(array, startIndex, pivotIndex - 1);
 
     // Sort the elements on the right side of the pivot.
-    quickSort(array, pivotIndex + 1, endIndex);
+    quickSort(array, pivotIndex + 1, endIndex); 
+}
+
+function sort(array) {
+    quickSort(array, 0, array.length - 1);
 }
 
 function test() {
