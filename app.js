@@ -6,6 +6,7 @@ var test = require("./test.js")
 var nonRecursiveFibonacci = require("./recursion/nonRecursiveFibonacci.js");
 var recursiveFibonacci = require("./recursion/recursiveFibonacci.js");
 var recursiveMin = require("./recursion/recursiveMin.js");
+var phoneCombinations = require("./recursion/phoneCombinations.js");
 
 // Arrays
 var binarySearch = require("./arrays/binarySearch.js");
@@ -14,6 +15,7 @@ var mergeSortedArrays = require("./arrays/mergeSortedArrays.js");
 var sumOfTheArray = require("./arrays/sumOfTheArray.js");
 var quickSort = require("./arrays/quickSort.js");
 var selectionSort = require("./arrays/selectionSort.js");
+var stack = require("./arrays/stack.js");
 
 // OOP
 var oopExamples = require("./oop/examples.js");
@@ -28,6 +30,6 @@ var wordContext = require("./other/wordContext.js");
 
 // To run a different module just change this line and make sure
 // the module exports the "run" function.
-var moduleToRun = digits;
+var moduleToRun = phoneCombinations;
 
 moduleToRun.run();
