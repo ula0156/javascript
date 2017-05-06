@@ -1,7 +1,7 @@
 function binarySearch(sInd, eInd, numbers, n) {
     // if the array is empty -> return false, there is not looking number in the array
     if (numbers.length == 0) {
-        // if ther is only one number left -> check if it's looking number
+        // if there is only one number left -> check if it's looking number
         return false;
     } 
     
